@@ -1,0 +1,1 @@
+export const UNABLE_TO_GET_PLAYER_STATS = `Unable to reach player stats json.`;

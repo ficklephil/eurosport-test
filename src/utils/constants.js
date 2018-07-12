@@ -1,0 +1,1 @@
+export const PLAYER_STATS_JSON = `https://gist.githubusercontent.com/ldabiralai/cf1588cd80fed41661adecb2e3ca9704/raw/8df6831c33c1b0c178a533e8953a61d11434f220/headtohead.json`;
