@@ -3,7 +3,7 @@ import {shallow, mount, render} from 'enzyme';
 
 import PlayerStat from '../index';
 
-describe('<PlayerStat />', () => {
+describe('<Players />', () => {
 
   const player = {
     'shortname': 'S.WAW'

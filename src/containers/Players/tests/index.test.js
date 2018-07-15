@@ -1,9 +1,9 @@
 import React from 'react';
 import {shallow, mount, render} from 'enzyme';
 
-import PlayerStats from '../index';
+import Players from '../index';
 
-describe('<PlayerStats />', () => {
+describe('<Players />', () => {
 
   const players = [
     {
@@ -13,11 +13,11 @@ describe('<PlayerStats />', () => {
     }
   ];
 
-  const renderedComponent = shallow(<PlayerStats players={players}/>);
+  const renderedComponent = shallow(<Players players={players}/>);
 
-  it('should render a <PlayerStat> tag for each player.', () => {
+  it('should render a <Players> tag for each player.', () => {
 
-    expect(renderedComponent.find('PlayerStat').length).toEqual(players.length);
+    expect(renderedComponent.find('Player').length).toEqual(players.length);
   });
 
   // it('should render a <SelectField> with an onChange attribute', () => {

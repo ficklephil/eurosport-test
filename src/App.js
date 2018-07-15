@@ -2,14 +2,13 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 
 import requestPlayerStats from './services/requestPlayerStats';
-import PlayerStats from './containers/PlayerStats';
+import Players from './containers/Players';
 
 /**
  * Change width here, to tests responsive css.
  */
 const PlayerStatsResponsiveWrapper = styled.div`
-  border: 1px solid red;
-  width: 100%;
+  width: 50%;
 `;
 
 class App extends Component {
@@ -31,7 +30,7 @@ class App extends Component {
   render() {
     return (
       <PlayerStatsResponsiveWrapper>
-        <PlayerStats players={this.state.players}></PlayerStats>
+        <Players players={this.state.players}></Players>
       </PlayerStatsResponsiveWrapper>
     );
   }

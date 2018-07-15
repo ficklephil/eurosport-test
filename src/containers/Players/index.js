@@ -2,35 +2,34 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import PlayerStat from '../../components/PlayerStat';
+import Player from '../../components/Player';
 
-const PlayerStatsWrapper = styled.div`
-  border: 1px solid red;
+const PlayersWrapper = styled.div`
 `;
 
-const PlayerStats = ({players}) => {
+const Players = ({players}) => {
 
   return (
-    <PlayerStatsWrapper>
+    <PlayersWrapper>
       {
         players.map((player) => (
-          <PlayerStat player={player} key={player.shortname}></PlayerStat>
+          <Player player={player} key={player.shortname}></Player>
         ))
       }
-    </PlayerStatsWrapper>
+    </PlayersWrapper>
   );
 };
 
 /**
  * TODO : Test Component takes in stats.
- * Test Component renders PlayerStats based on how many players stats are input.
+ * Test Component renders Players based on how many players stats are input.
  * Should say no player stats to display if object is empty.
  * We don't need to tests the proptype is here, as Prop Type is part of react, but we should check that
  * the component renders based on input.
  * @type {{stats: *}}
  */
-PlayerStats.propTypes = {
+Players.propTypes = {
   players: PropTypes.array,
 };
 
-export default PlayerStats;
+export default Players;
