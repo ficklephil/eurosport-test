@@ -1,5 +1,4 @@
-# eurosport-unattended-test
-Philip Aberneithy Eurosport Unattended Test
+# Philip Aberneithy Eurosport Unattended Test
 
 Hi, hope you are well.
 
@@ -22,8 +21,7 @@ therefore I considered it unneeded data.
 the User to see 'Switzerland' or 'Spain'.
 
 * Less of a decision to make, more of a best practice: I knew the PlayerStat component had
-to be responsive as it would need to fit in a section of a larger page, therefore I had to make the PlayerStat
-component responsive.
+to be responsive as it would need to fit in a section of a larger page.
 
 ## Architecture
 
@@ -42,10 +40,10 @@ dependent on a polyfill to support it's use in IE11. Therefore I used Axios in t
 supports IE11.
 
 * Pure HTML and CSS used for responsive design. No Bootstrap, No Material Design, as the PlayerStat application
-is currently very small, therefore a grand visual framework is not needed.
+is currently very small, therefore a visual framework is not needed.
 
 * Enzyme for Unit Testing components. I believe that unit testings is one of the most important elements
-to application development, therefore I unit test everything.
+of application development, therefore I unit test everything.
 
 * Styled Components. To provide more semantic naming of elements, and avoid CSS leaking from one component
 to the next.
@@ -53,9 +51,9 @@ to the next.
 
 ## How to Run
 
-### `npm install` - Installs the components required.
-### `npm start` - Runs the application in development mode.
-### `npm test` - Runs test suite.
+`npm install` - Installs the components required.
+`npm start` - Runs the application in development mode.
+`npm test` - Runs test suite.
 
 Many thanks,
 
