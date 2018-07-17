@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount, render} from 'enzyme';
+import {shallow} from 'enzyme';
 
 import PlayerStatistics from '../index';
 
@@ -22,8 +22,9 @@ describe('<PlayerStatistics />', () => {
 
   const renderedComponent = shallow(<PlayerStatistics statistics={statistics}/>);
 
-  it('should render a <div> tag.', () => {
+  // TODO : Harden later on.
+  it('should render five <PlayerAttribute> tags, one of each player attribute.', () => {
 
-    expect(renderedComponent.find('div').length).toEqual(3);
+    expect(renderedComponent.find('PlayerAttribute').length).toEqual(5);
   });
 });

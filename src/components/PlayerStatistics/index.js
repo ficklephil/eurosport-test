@@ -12,6 +12,8 @@ const PlayerAttributes = styled.div`
   padding: 4px 0 0 0;
   `;
 
+PlayerAttribute.displayName = 'PlayerAttribute';
+
 const PlayerStatistics = ({statistics}) => {
 
   return (

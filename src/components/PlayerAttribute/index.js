@@ -7,10 +7,14 @@ const Attribute = styled.div`
   padding: 5px;
   `;
 
+Attribute.displayName = 'Attribute';
+
 const Value = styled.span`
   font-size: 1.1rem;
   padding: 5px;
   `;
+
+Value.displayName = 'Value';
 
 const PlayerAttribute = ({name, value}) => {
 

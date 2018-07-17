@@ -9,10 +9,11 @@ describe('<PlayerLastMatch />', () => {
     1, 1, 1, 0, 1
   ];
 
-  const renderedComponent = render(<PlayerLastMatch lastMatchScores={lastMatchScores}/>);
+  const renderedComponent = shallow(<PlayerLastMatch lastMatchScores={lastMatchScores}/>);
 
-  it('should render an <div> tag.', () => {
+  it('should render a <LastMatchScoreTableCell> tag for each score.', () => {
 
-    expect(renderedComponent.find('div').length).toEqual(1);
+    expect(renderedComponent.find('LastMatchScoreTableCell').length).toEqual(lastMatchScores.length);
   });
+
 });

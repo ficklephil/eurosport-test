@@ -21,29 +21,34 @@ const ColumnOneWrapper = styled.div`
   justify-content: center;
 `;
 
+const ColumnTwoWrapper = styled.div``;
+
 const Img = styled.img`
   max-height: 150px;
   max-width: 100px;
   padding: 8px;
 `;
 
-const ColumnTwoWrapper = styled.div`
-`;
+Img.displayName = 'Img';
 
 const PlayerName = styled.div`
   font-size: 1.2rem;
   padding: 11px 0 4px 6px;
 `;
 
+PlayerName.displayName = 'PlayerName';
+
 const Player = ({player}) => {
+
+  const playerName = `${player.firstname} ${player.lastname}`;
 
   return (
     <PlayerWrapper>
       <ColumnOneWrapper>
-        <Img src={player.picture} alt='hello'/>
+        <Img src={player.picture} alt={playerName}/>
       </ColumnOneWrapper>
       <ColumnTwoWrapper>
-        <PlayerName>{`${player.firstname} ${player.lastname}`}</PlayerName>
+        <PlayerName>{playerName}</PlayerName>
         <PlayerCountry country={player.country}/>
         <PlayerStatistics statistics={player.data}/>
       </ColumnTwoWrapper>

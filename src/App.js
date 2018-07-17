@@ -21,10 +21,17 @@ class App extends Component {
   }
 
   componentDidMount() {
-    requestPlayerStats()
+    this.asyncRequest = requestPlayerStats()
       .then(response => {
+        this.asyncRequest = null;
         this.setState({players: response.players})
       });
+  }
+
+  componentWillUnmount() {
+    if(this.asyncRequest){
+      this.asyncRequest.cancel();
+    }
   }
 
   render() {

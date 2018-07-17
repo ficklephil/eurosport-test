@@ -14,6 +14,7 @@ const LastMatchScoreText = styled.div`
   `;
 
 const LastMatchScoreTable = styled.table``;
+const LastMatchScoreTableBody = styled.tbody``;
 const LastMatchScoreTableRow = styled.tr``;
 const LastMatchScoreTableCell = styled.td`
   border: 1px dotted #efefef;
@@ -21,19 +22,23 @@ const LastMatchScoreTableCell = styled.td`
   padding: 5px;
 `;
 
+LastMatchScoreTableCell.displayName = 'LastMatchScoreTableCell';
+
 const PlayerLastMatch = ({lastMatchScores}) => {
 
   return (
     <PlayerLastMatchWrapper>
       <LastMatchScoreText>Last match scores:</LastMatchScoreText>
       <LastMatchScoreTable>
-        <LastMatchScoreTableRow>
-          {
-            lastMatchScores.map((score, index) => (
-              <LastMatchScoreTableCell key={index}>{score}</LastMatchScoreTableCell>
-            ))
-          }
-        </LastMatchScoreTableRow>
+        <LastMatchScoreTableBody>
+          <LastMatchScoreTableRow>
+            {
+              lastMatchScores.map((score, index) => (
+                <LastMatchScoreTableCell key={index}>{score}</LastMatchScoreTableCell>
+              ))
+            }
+          </LastMatchScoreTableRow>
+        </LastMatchScoreTableBody>
       </LastMatchScoreTable>
     </PlayerLastMatchWrapper>
   );

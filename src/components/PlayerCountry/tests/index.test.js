@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow, mount, render} from 'enzyme';
+import {shallow} from 'enzyme';
 
 import PlayerCountry from '../index';
 
@@ -10,15 +10,20 @@ describe('<PlayerCountry />', () => {
     'code': 'SUI',
   };
 
-  const renderedComponent = render(<PlayerCountry country={country}/>);
+  const renderedComponent = shallow(<PlayerCountry country={country}/>);
 
-  it('should render an <img> tag.', () => {
+  it('should render an <Img> tag.', () => {
 
-    expect(renderedComponent.find('img').length).toEqual(1);
+    expect(renderedComponent.find('Img').length).toEqual(1);
   });
 
-  it('should render an <img> tag, with the picture as the src.', () => {
+  it('should render an <Img> tag, with the picture as the src.', () => {
 
-    expect(renderedComponent.find('img').prop('src')).toEqual(country.picture);
+    expect(renderedComponent.find('Img').prop('src')).toEqual(country.picture);
+  });
+
+  it('should render an <CountyName> tag.', () => {
+
+    expect(renderedComponent.find('CountyName').length).toBeDefined();
   });
 });
