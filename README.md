@@ -51,9 +51,9 @@ to the next.
 
 ## How to Run
 
-`npm install` - Installs the components required.
-`npm start` - Runs the application in development mode.
-`npm test` - Runs test suite.
+* `npm install` - Installs the components required.
+* `npm start` - Runs the application in development mode.
+* `npm test` - Runs test suite.
 
 Many thanks,
 
